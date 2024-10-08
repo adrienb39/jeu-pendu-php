@@ -9,7 +9,7 @@ class MotADeviner
     private array $motCache = [];
 
     public function __construct(string $filename) {
-        $this->mots = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $this->mots = file($filename);
         $this->mot = strtoupper($this->mots[array_rand($this->mots)]);
         $this->motCache = array_fill(0, mb_strlen($this->mot), '_');
     }
