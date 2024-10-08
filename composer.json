@@ -12,5 +12,8 @@
             "email": "adrienb39@yahoo.com"
         }
     ],
-    "require": {}
+  "require": {
+    "ext-mbstring": "*",
+    "ext-readline": "*"
+  }
 }
