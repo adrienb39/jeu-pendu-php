@@ -8,8 +8,8 @@ class MotADeviner
     private string $mot;
     private array $motCache = [];
 
-    public function __construct() {
-        $this->mots = ["développement", "informatique", "logiciel", "ordinateur"];
+    public function __construct(string $filename) {
+        $this->mots = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $this->mot = strtoupper($this->mots[array_rand($this->mots)]);
         $this->motCache = array_fill(0, mb_strlen($this->mot), '_');
     }

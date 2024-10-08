@@ -8,8 +8,8 @@ class JeuPendu
     private int $tentativesRestantes;
     private array $lettresProposees;
 
-    public function __construct() {
-        $this->motADeviner = new MotADeviner();
+    public function __construct(string $filename) {
+        $this->motADeviner = new MotADeviner($filename);
         $this->tentativesRestantes = 7;
         $this->lettresProposees = [];
     }
@@ -28,7 +28,7 @@ class JeuPendu
     }
 
     public function afficherMotCache(): void {
-        echo implode(" ", $this->motADeviner->getMotCache()) . "\n";
+        echo "Mot à deviner : " . implode(" ", $this->motADeviner->getMotCache()) . "\n";
         echo "Tentatives restantes : " . $this->tentativesRestantes . "\n";
         echo "Lettres déjà proposées : " . implode(", ", $this->lettresProposees) . "\n";
     }
