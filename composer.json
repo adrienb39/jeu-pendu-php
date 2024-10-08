@@ -1,0 +1,16 @@
+{
+    "name": "bruyerea/jeu-pendu-php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "adrienb39",
+            "email": "adrienb39@yahoo.com"
+        }
+    ],
+    "require": {}
+}
